@@ -2,15 +2,15 @@
 
 import React, { Component } from "react";
 import _ from "lodash";
-import "./App.css";
-import EventList from "./EventList";
-import CitySearch from "./CitySearch";
-import EventNumber from "./EventNumber";
-import CityEventsChart from "./CityEventsChart";
-import EventGenresChart from "./EventGenresChart";
-import { OfflineAlert } from "./Alert";
-import { getEvents, extractLocations } from "./api";
-import "./nprogress.css";
+import "./styles/App.css";
+import EventList from "./components/EventList";
+import CitySearch from "./components/CitySearch";
+import EventNumber from "./components/EventNumber";
+import CityEventsChart from "./components/CityEventsChart";
+import EventGenresChart from "./components/EventGenresChart";
+import { OfflineAlert } from "./components/Alert";
+import { getEvents, extractLocations } from "./services/api";
+import "./styles/nprogress.css";
 
 class App extends Component {
 	state = {

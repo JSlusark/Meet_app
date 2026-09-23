@@ -3,11 +3,11 @@
 import React from "react";
 import { shallow, mount } from "enzyme";
 import App from "../App";
-import EventList from "../EventList"; // You may need to adjust the path based on your file structure
-import CitySearch from "../CitySearch";
-import EventNumber from "../EventNumber";
-import { mockData } from "../mock-data";
-import { extractLocations, getEvents } from "../api";
+import EventList from "../components/EventList"; // You may need to adjust the path based on your file structure
+import CitySearch from "../components/CitySearch";
+import EventNumber from "../components/EventNumber";
+import { mockData } from "../services/mock-data";
+import { extractLocations, getEvents } from "../services/api";
 
 //unit testing
 describe("<App /> component", () => {

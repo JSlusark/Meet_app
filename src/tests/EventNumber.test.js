@@ -1,6 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
-import EventNumber from "../EventNumber";
+import EventNumber from "../components/EventNumber";
 
 describe("<EventNumber /> component", () => {
 	let EventNumberWrapper;

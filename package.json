@@ -2,7 +2,7 @@
   "name": "meet",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://birdieber.github.io/meet/",
+  "homepage": "https://jslusark.github.io/meet/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^11.2.7",
@@ -34,9 +34,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --transformIgnorePatterns 'node_modules/(?!axios)/'",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "ci": "CI=true react-scripts test --watchAll=false --testPathIgnorePatterns=EndToEnd",
+    "deploy": "npm run build && gh-pages -d build",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -64,6 +64,9 @@
     "puppeteer": "^18.1.0"
   },
   "jest": {
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/utils/setupTests.js"
+    ],
     "moduleNameMapper": {
       "axios": "axios/dist/node/axios.cjs"
     }
